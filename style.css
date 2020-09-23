@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #ffaf00, #bb02ff);
+  background-attachment: fixed;
+}
+.container {
+  position: relative;
+  width: 1100px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  background: #fff;
+  margin: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+.container .card .circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  clip-path: circle(180px at center 0);
+  text-align: center;
+}
+.container .card .circle h2 {
+  color: #fff;
+  font-size: 3.1rem;
+  padding: 30px 0;
+}
+
+.container .card .content {
+  position: absolute;
+  bottom: 10px;
+  page-break-after: 20px;
+  text-align: center;
+}
+.container .card .content p {
+  color: #666;
+}
+.container .card .content img {
+  width: 100px;
+  height: 150px;
+  position: relative;
+  display: inline;
+  padding: 10px 10px;
+  border-radius: 30px;
+  margin-top: 15px;
+}
+.container .card:nth-child(3) .circle {
+  background: #ffaf00;
+}
+.container .card:nth-child(2) .circle {
+  background: #da2268;
+}
+.container .card:nth-child(1) .circle {
+  background: #bb02ff;
+}
+.container:hover .card {
+  transform: scale(0.9);
+}
+.container .card:hover {
+  transform: scale(1.1);
+}
+.container .card .circle h2:hover {
+  background: black;
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.container .card .content img:hover {
+  width: 200px;
+}
